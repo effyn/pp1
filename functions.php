@@ -39,15 +39,35 @@ function average($arr)
 
 function removeDups($arr)
 {
-    $result = array();
+    $new_arr = array();
 
     foreach ($arr as $item)
     {
-        if (!in_array($item, $result))
+        if (!in_array($item, $new_arr))
         {
-            $result[] = $item;
+            $new_arr[] = $item;
         }
     }
 
-    return $result;
+    return $new_arr;
+}
+
+function distribution($arr)
+{
+    $new_arr = array();
+
+    foreach ($arr as $item)
+    {
+        if (isset($new_arr[$item]))
+        {
+            $new_arr[$item] += 1;
+        }
+
+        else
+        {
+            $new_arr[$item] = 1;
+        }
+    }
+
+    return $new_arr;
 }

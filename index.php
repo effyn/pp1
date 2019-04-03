@@ -21,7 +21,10 @@
     echo '<p>Largest: ' . largest($numbers) . '</p>';
     echo '<p>Average: ' . average($numbers) . '</p>';
     echo '<p>Without duplicates: ';
-    printArr(removeDups($numbers));
+    print_r(removeDups($numbers));
+    echo '</p>';
+    echo '<p>Distribution: ';
+    print_r(distribution($numbers));
     echo '</p>';
 ?>
 
