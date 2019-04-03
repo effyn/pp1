@@ -10,5 +10,18 @@
 <body>
 <h1>Pair Program 1</h1>
 
+<?php
+    function printArr($arr)
+    {
+        foreach ($arr as $item)
+        {
+            echo "<p>$item</p>";
+        }
+    }
+
+    $numbers = array(7,9,8,9,8,8,6);
+    printArr($numbers);
+?>
+
 </body>
 </html>
