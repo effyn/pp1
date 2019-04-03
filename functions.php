@@ -36,3 +36,18 @@ function average($arr)
 
     return $sum / sizeof($arr);
 }
+
+function removeDups($arr)
+{
+    $result = array();
+
+    foreach ($arr as $item)
+    {
+        if (!in_array($item, $result))
+        {
+            $result[] = $item;
+        }
+    }
+
+    return $result;
+}

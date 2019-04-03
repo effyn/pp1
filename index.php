@@ -20,6 +20,9 @@
     printArr($numbers);
     echo '<p>Largest: ' . largest($numbers) . '</p>';
     echo '<p>Average: ' . average($numbers) . '</p>';
+    echo '<p>Without duplicates: ';
+    printArr(removeDups($numbers));
+    echo '</p>';
 ?>
 
 </body>
