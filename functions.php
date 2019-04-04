@@ -15,9 +15,8 @@ function largest($arr)
     }
 
     $max = $arr[0];
-    for ($i = 1; $i < sizeof($arr); $i++)
+    foreach (array_slice($arr,1) as $item)
     {
-        $item = $arr[$i];
         if ($item > $max)
         {
             $max = $item;
@@ -39,35 +38,36 @@ function average($arr)
 
 function removeDups($arr)
 {
-    $new_arr = array();
+    $newArr = array();
 
     foreach ($arr as $item)
     {
-        if (!in_array($item, $new_arr))
+        if (!in_array($item, $newArr))
         {
-            $new_arr[] = $item;
+            $newArr[] = $item;
         }
     }
 
-    return $new_arr;
+    return $newArr;
 }
 
 function distribution($arr)
 {
-    $new_arr = array();
+    $newArr = array();
 
     foreach ($arr as $item)
     {
-        if (isset($new_arr[$item]))
+        if (isset($newArr[$item]))
         {
-            $new_arr[$item] += 1;
+            $newArr[$item] += 1;
         }
 
         else
         {
-            $new_arr[$item] = 1;
+            $newArr[$item] = 1;
         }
     }
 
-    return $new_arr;
+    ksort($newArr);
+    return $newArr;
 }
